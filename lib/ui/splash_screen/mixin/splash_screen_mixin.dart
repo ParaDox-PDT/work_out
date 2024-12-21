@@ -2,8 +2,15 @@ part of '../splash_screen_part.dart';
 
 mixin SplashScreenMixin on State<SplashScreen> {
   _init() async {
+    final bool isFirstLaunch = localStorage.getFirstStart();
     await Future.delayed(splashScreenDuration, () {
-      context.pushReplacementNamed(Routes.home);
+      if (mounted) {
+        if (isFirstLaunch) {
+          context.pushReplacementNamed(Routes.onBoarding);
+        } else {
+          context.pushReplacementNamed(Routes.home);
+        }
+      }
     });
   }
 

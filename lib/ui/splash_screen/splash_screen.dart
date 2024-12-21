@@ -11,8 +11,14 @@ class _SplashScreenState extends State<SplashScreen> with SplashScreenMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Splash Screen'),
+      extendBody: true,
+      extendBodyBehindAppBar: true,
+      backgroundColor: AppColors.c236F38,
+      body: Center(
+        child: Image.asset(
+          AppImages.splashImg,
+          width: 216.w,
+        ),
       ),
     );
   }

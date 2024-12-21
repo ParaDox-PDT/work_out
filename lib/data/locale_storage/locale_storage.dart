@@ -1,10 +1,17 @@
-import 'package:default_project/data/model/default_model.dart';
+import 'package:work_out/data/model/default_model.dart';
 import 'package:hive/hive.dart';
 
 final class LocaleStorage {
   const LocaleStorage(this.box);
 
   final Box<dynamic> box;
+
+  /// SAVE AND GET FIRST START
+  Future<void> setFirstStart(bool firstStart) async {
+    await box.put('first_start', firstStart);
+  }
+
+  bool getFirstStart() => box.get('first_start', defaultValue: true);
 
   /// SAVE AND GET SOUND
   Future<void> setSound(bool sound) async {

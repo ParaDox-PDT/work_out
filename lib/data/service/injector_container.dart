@@ -1,6 +1,7 @@
 import 'dart:io';
-import 'package:default_project/data/bloc/settings_bloc/settings_bloc.dart';
-import 'package:default_project/data/locale_storage/locale_storage.dart';
+import 'package:work_out/data/bloc/on_boarding_bloc/on_boarding_bloc.dart';
+import 'package:work_out/data/bloc/settings_bloc/settings_bloc.dart';
+import 'package:work_out/data/locale_storage/locale_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive/hive.dart';
 
@@ -13,6 +14,7 @@ Future<void> initApp() async {
   await initHive();
   sl.registerSingleton<LocaleStorage>(LocaleStorage(_box));
   sl.registerSingleton<SettingsBloc>(SettingsBloc());
+  sl.registerLazySingleton<OnBoardingBloc>(OnBoardingBloc.new);
 }
 
 Future<void> initHive() async {

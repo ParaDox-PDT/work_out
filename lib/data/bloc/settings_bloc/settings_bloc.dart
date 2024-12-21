@@ -1,4 +1,4 @@
-import 'package:default_project/ui/router/app_routes.dart';
+import 'package:work_out/ui/router/app_routes.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 

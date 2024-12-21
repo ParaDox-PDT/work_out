@@ -7,5 +7,6 @@ sealed class Routes {
 
   // main
   static const String home = '/home';
+  static const String onBoarding = '/on_boarding';
 
 }

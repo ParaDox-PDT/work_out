@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:default_project/ui/router/app_routes.dart';
+import 'package:work_out/ui/router/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
