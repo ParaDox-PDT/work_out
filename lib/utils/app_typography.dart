@@ -15,14 +15,14 @@ const _h4LineHeight = 42.0;
 const _t1Size = 24.0;
 const _t1LineHeight = 28.64;
 
-const _t2Size = 20.0;
-const _t2LineHeight = 23.87;
+const _headlineSize = 22.0;
+const _headlineLineHeight = 26.4;
 
-const _t3Size = 16.0;
-const _t3LineHeight = 19.09;
+const _bodySize = 17.0;
+const _bodyLineHeight = 22.0;
 
-const _stSize = 14.0;
-const _stLineHeight = 16.71;
+const _captionSize = 15.0;
+const _captionLineHeight = 22.0;
 
 const _pSize = 12.0;
 const _pLineHeight = 14.32;
@@ -30,7 +30,7 @@ const _pLineHeight = 14.32;
 class AppTypography {
   AppTypography._();
 
-  static const fontFamily = 'Sriracha';
+  static const fontFamily = 'FiraSans';
 
   // HEADER 1
   static const h1Regular = TextStyle(
@@ -177,91 +177,91 @@ class AppTypography {
       height: _t1LineHeight / _t1Size,
       color: Colors.white);
 
-  // TITLE 2
-  static const t2Regular = TextStyle(
-      fontSize: _t2Size,
+  // HEADLINE
+  static const headlineRegular = TextStyle(
+      fontSize: _headlineSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w400,
-      height: _t2LineHeight / _t2Size,
+      height: _headlineLineHeight / _headlineSize,
       color: Colors.white);
 
-  static const t2Medium = TextStyle(
-      fontSize: _t2Size,
+  static const headlineMedium = TextStyle(
+      fontSize: _headlineSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w500,
-      height: _t2LineHeight / _t2Size,
+      height: _headlineLineHeight / _headlineSize,
       color: Colors.white);
 
-  static const t2SemiBold = TextStyle(
-      fontSize: _t2Size,
+  static const headlineSemiBold = TextStyle(
+      fontSize: _headlineSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w600,
-      height: _t2LineHeight / _t2Size,
+      height: _headlineLineHeight / _headlineSize,
       color: Colors.white);
 
-  static const t2Bold = TextStyle(
-      fontSize: _t2Size,
+  static const headlineBold = TextStyle(
+      fontSize: _headlineSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
-      height: _t2LineHeight / _t2Size,
+      height: _headlineLineHeight / _headlineSize,
       color: Colors.white);
 
-  // TITLE 3
-  static const t3Regular = TextStyle(
-      fontSize: _t3Size,
+  // BODY
+  static const bodyRegular = TextStyle(
+      fontSize: _bodySize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w400,
-      height: _t3LineHeight / _t3Size,
+      height: _bodyLineHeight / _bodySize,
       color: Colors.white);
 
-  static const t3Medium = TextStyle(
-      fontSize: _t3Size,
+  static const bodyMedium = TextStyle(
+      fontSize: _bodySize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w500,
-      height: _t3LineHeight / _t3Size,
+      height: _bodyLineHeight / _bodySize,
       color: Colors.white);
 
-  static const t3SemiBold = TextStyle(
-      fontSize: _t3Size,
+  static const bodySemiBold = TextStyle(
+      fontSize: _bodySize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w600,
-      height: _t3LineHeight / _t3Size,
+      height: _bodyLineHeight / _bodySize,
       color: Colors.white);
 
-  static const t3Bold = TextStyle(
-      fontSize: _t3Size,
+  static const bodyBold = TextStyle(
+      fontSize: _bodySize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
-      height: _t3LineHeight / _t3Size,
+      height: _bodyLineHeight / _bodySize,
       color: Colors.white);
 
-  // SUBTITLE
-  static const stRegular = TextStyle(
-      fontSize: _stSize,
+  // CAPTION
+  static const captionRegular = TextStyle(
+      fontSize: _captionSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w400,
-      height: _stLineHeight / _stSize,
+      height: _captionLineHeight / _captionSize,
       color: Colors.white);
 
-  static const stMedium = TextStyle(
-      fontSize: _stSize,
+  static const captionMedium = TextStyle(
+      fontSize: _captionSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w500,
-      height: _stLineHeight / _stSize,
+      height: _captionLineHeight / _captionSize,
       color: Colors.white);
 
-  static const stSemiBold = TextStyle(
-      fontSize: _stSize,
+  static const captionSemiBold = TextStyle(
+      fontSize: _captionSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w600,
-      height: _stLineHeight / _stSize,
+      height: _captionLineHeight / _captionSize,
       color: Colors.white);
 
-  static const stBold = TextStyle(
-      fontSize: _stSize,
+  static const captionBold = TextStyle(
+      fontSize: _captionSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
-      height: _stLineHeight / _stSize,
+      height: _captionLineHeight / _captionSize,
       color: Colors.white);
 
   // PARAGRAPH

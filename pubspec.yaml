@@ -41,7 +41,24 @@ flutter:
     - assets/icons/
 
   fonts:
-    - family: Sriracha
+    - family: FiraSans
       fonts:
-        - asset: assets/fonts/Sriracha/Sriracha-Regular.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-Black.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-BlackItalic.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-Bold.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-BoldItalic.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-ExtraBold.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-ExtraBoldItalic.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-ExtraLight.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-ExtraLightItalic.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-Italic.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-Light.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-LightItalic.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-Medium.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-MediumItalic.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-Regular.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-SemiBold.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-SemiBoldItalic.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-Thin.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-ThinItalic.ttf
           style: italic

@@ -26,16 +26,6 @@ final GoRouter router = GoRouter(
       name: Routes.initial,
       builder: (_, __) => const SplashScreen(),
     ),
-    //
-    // GoRoute(
-    //   name: Routes.onBoarding,
-    //   path: Routes.onBoarding,
-    //   pageBuilder: (_, __) => _buildSlidePage(
-    //       child: BlocProvider(
-    //     create: (context) => sl<OnBoardingBloc>(),
-    //     child: const OnBoardingScreen(),
-    //   )),
-    // ),
 
     //on boarding
     GoRoute(
@@ -100,24 +90,4 @@ class FadePageRoute<T> extends PageRouteBuilder<T> {
 
   @override
   Duration get transitionDuration => const Duration(milliseconds: 1000);
-}
-
-Page<void> _buildSlidePage({required Widget child}) {
-  return CustomTransitionPage(
-    transitionDuration: const Duration(milliseconds: 500),
-    child: child,
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      const begin = Offset(1.0, 0.0);
-      const end = Offset.zero;
-      const curve = Curves.easeInOut;
-
-      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-      var offsetAnimation = animation.drive(tween);
-
-      return SlideTransition(
-        position: offsetAnimation,
-        child: child,
-      );
-    },
-  );
 }

@@ -4,6 +4,7 @@ import 'package:work_out/ui/router/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:work_out/utils/app_theme.dart';
 
 void main() async {
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -24,6 +25,7 @@ class MainApp extends StatelessWidget {
       routerConfig: router,
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
+      theme: lightTheme,
     );
   }
 }

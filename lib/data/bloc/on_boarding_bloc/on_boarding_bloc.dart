@@ -7,8 +7,11 @@ part 'on_boarding_state.dart';
 
 class OnBoardingBloc extends Bloc<OnBoardingEvent, OnBoardingState> {
   OnBoardingBloc() : super(const OnBoardingState()) {
-    on<OnBoardingEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+    on<OnBoardingChangePageEvent>(_onChangePage);
+  }
+
+  void _onChangePage(
+      OnBoardingChangePageEvent event, Emitter<OnBoardingState> emit) {
+    emit(state.copyWith(currentIndex: state.currentIndex + 1));
   }
 }
