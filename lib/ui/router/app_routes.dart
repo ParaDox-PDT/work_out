@@ -1,9 +1,13 @@
+import 'package:work_out/data/bloc/create_training_bloc/create_training_bloc.dart';
 import 'package:work_out/data/bloc/on_boarding_bloc/on_boarding_bloc.dart';
+import 'package:work_out/data/bloc/personalisation_bloc/personalisation_bloc.dart';
 import 'package:work_out/data/bloc/settings_bloc/settings_bloc.dart';
 import 'package:work_out/data/locale_storage/locale_storage.dart';
 import 'package:work_out/data/service/injector_container.dart';
+import 'package:work_out/ui/create_training_screen/create_training_screen_part.dart';
 import 'package:work_out/ui/home_screen/home_screen_part.dart';
 import 'package:work_out/ui/on_boarding_screen/on_boarding_screen_part.dart';
+import 'package:work_out/ui/personalisation_screen/personalisation_screen_part.dart';
 import 'package:work_out/ui/splash_screen/splash_screen_part.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,6 +31,26 @@ final GoRouter router = GoRouter(
       builder: (_, __) => const SplashScreen(),
     ),
 
+    // personalisation
+
+    GoRoute(
+      name: Routes.personalisation,
+      path: Routes.personalisation,
+      builder: (_, __) => BlocProvider(
+        create: (_) => PersonalisationBloc(),
+        child: const PersonalisationScreen(),
+      ),
+    ),
+
+    //create training
+    GoRoute(
+      name: Routes.createTraining,
+      path: Routes.createTraining,
+      builder: (_, __) => BlocProvider(
+        create: (_) => CreateTrainingBloc(),
+        child: const CreateTrainingScreen(),
+      ),
+    ),
     //on boarding
     GoRoute(
       name: Routes.onBoarding,

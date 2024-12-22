@@ -24,8 +24,8 @@ const _bodyLineHeight = 22.0;
 const _captionSize = 15.0;
 const _captionLineHeight = 22.0;
 
-const _pSize = 12.0;
-const _pLineHeight = 14.32;
+const _footnoteSize = 13.0;
+const _footnoteLineHeight = 16.0;
 
 class AppTypography {
   AppTypography._();
@@ -265,31 +265,31 @@ class AppTypography {
       color: Colors.white);
 
   // PARAGRAPH
-  static const pRegular = TextStyle(
-      fontSize: _pSize,
+  static const footnoteRegular = TextStyle(
+      fontSize: _footnoteSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w400,
-      height: _pLineHeight / _pSize,
+      height: _footnoteLineHeight / _footnoteSize,
       color: Colors.white);
 
-  static const pMedium = TextStyle(
-      fontSize: _pSize,
+  static const footnoteMedium = TextStyle(
+      fontSize: _footnoteSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w500,
-      height: _pLineHeight / _pSize,
+      height: _footnoteLineHeight / _footnoteSize,
       color: Colors.white);
 
-  static const pSemiBold = TextStyle(
-      fontSize: _pSize,
+  static const footnoteSemiBold = TextStyle(
+      fontSize: _footnoteSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w600,
-      height: _pLineHeight / _pSize,
+      height: _footnoteLineHeight / _footnoteSize,
       color: Colors.white);
 
-  static const pBold = TextStyle(
-      fontSize: _pSize,
+  static const footnoteBold = TextStyle(
+      fontSize: _footnoteSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
-      height: _pLineHeight / _pSize,
+      height: _footnoteLineHeight / _footnoteSize,
       color: Colors.white);
 }

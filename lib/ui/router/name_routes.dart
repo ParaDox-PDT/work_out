@@ -8,5 +8,7 @@ sealed class Routes {
   // main
   static const String home = '/home';
   static const String onBoarding = '/on_boarding';
+  static const String personalisation = '/personalisation';
+  static const String createTraining = '/create_training';
 
 }

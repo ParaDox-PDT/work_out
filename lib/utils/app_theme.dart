@@ -58,4 +58,18 @@ final ThemeData lightTheme = appTheme.copyWith(
       minimumSize: const WidgetStatePropertyAll(Size(double.infinity, 42)),
     ),
   ),
+  appBarTheme: const AppBarTheme(
+    centerTitle: true,
+    backgroundColor: AppColors.c243640,
+    iconTheme: IconThemeData(
+      color: AppColors.c2EA33A,
+    ),
+    titleTextStyle: AppTypography.bodySemiBold,
+  ),
+  listTileTheme: ListTileThemeData(
+    tileColor: Colors.white.withOpacity(0.2),
+    shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12)),
+    leadingAndTrailingTextStyle: AppTypography.captionRegular
+  )
 );

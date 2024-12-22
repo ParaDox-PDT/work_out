@@ -17,6 +17,8 @@ class OnBoardingFooterButton extends StatelessWidget {
             controller.animateToPage(state.currentIndex,
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeIn);
+          } else {
+            context.pushNamed(Routes.personalisation);
           }
         },
         child: ElevatedButton(
