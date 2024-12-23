@@ -38,3 +38,30 @@ class CreateTrainingResetEvent extends CreateTrainingEvent {
   @override
   List<Object?> get props => [];
 }
+
+class CreateTrainingSaveEvent extends CreateTrainingEvent {
+  const CreateTrainingSaveEvent({required this.trainingName});
+
+  final String trainingName;
+
+  @override
+  List<Object?> get props => [trainingName];
+}
+
+class CreateTrainingChangeIconEvent extends CreateTrainingEvent {
+  const CreateTrainingChangeIconEvent({required this.iconIndex});
+
+  final int iconIndex;
+
+  @override
+  List<Object?> get props => [iconIndex];
+}
+
+class CreateTrainingAddExerciseEvent extends CreateTrainingEvent {
+  const CreateTrainingAddExerciseEvent({required this.exerciseName});
+
+  final String exerciseName;
+
+  @override
+  List<Object?> get props => [exerciseName];
+}

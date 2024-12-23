@@ -34,7 +34,8 @@ final class LocaleStorage {
     await box.put('all_trainings', allTrainings);
   }
 
-  bool getAllTrainings() => box.get('all_trainings', defaultValue: []);
+  AllTrainingModel? getAllTrainings() =>
+      box.get('all_trainings', defaultValue: null);
 }
 
 HiveInterface registerHive() => Hive
