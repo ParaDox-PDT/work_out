@@ -21,13 +21,13 @@ class _CreateTrainingScreenState extends State<CreateTrainingScreen>
               if (bloc.state.exercises.isNotEmpty &&
                   nameController.text.isNotEmpty) {
                 bloc.add(
-                    CreateTrainingSaveEvent(trainingName: nameController.text));
-              }
-              if (localStorage.getFirstStart()) {
-                await localStorage.setFirstStart(false);
-                if (context.mounted) context.goNamed(Routes.home);
-              } else {
-                context.pop();
+                  CreateTrainingSaveEvent(trainingName: nameController.text),
+                );
+                if (localStorage.getFirstStart()) {
+                  if (context.mounted) context.pushNamed(Routes.preparation);
+                } else {
+                  context.pop();
+                }
               }
             },
             child: Text(

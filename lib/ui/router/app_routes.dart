@@ -8,6 +8,7 @@ import 'package:work_out/ui/create_training_screen/create_training_screen_part.d
 import 'package:work_out/ui/home_screen/home_screen_part.dart';
 import 'package:work_out/ui/on_boarding_screen/on_boarding_screen_part.dart';
 import 'package:work_out/ui/personalisation_screen/personalisation_screen_part.dart';
+import 'package:work_out/ui/preparation_screen/preparation_screen_part.dart';
 import 'package:work_out/ui/splash_screen/splash_screen_part.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -40,6 +41,14 @@ final GoRouter router = GoRouter(
         create: (_) => PersonalisationBloc(),
         child: const PersonalisationScreen(),
       ),
+    ),
+
+    // preparation
+
+    GoRoute(
+      name: Routes.preparation,
+      path: Routes.preparation,
+      builder: (_, __) => const PreparationScreen(),
     ),
 
     //create training
