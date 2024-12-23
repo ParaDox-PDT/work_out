@@ -1,11 +1,24 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:work_out/ui/create_training_screen/create_training_screen_part.dart';
+import 'package:go_router/go_router.dart';
+import 'package:work_out/data/bloc/training_bloc/training_bloc.dart';
+import 'package:work_out/data/model/training_model.dart';
+import 'package:work_out/data/service/injector_container.dart';
+import 'package:work_out/ui/router/app_routes.dart';
+import 'package:work_out/ui/widgets/widgets_part.dart';
+import 'package:work_out/utils/app_colors.dart';
 import 'package:work_out/utils/app_icons.dart';
 import 'package:work_out/utils/app_typography.dart';
 import 'package:work_out/utils/extensions.dart';
+import 'package:work_out/utils/functions/base_functions.dart';
 
 part 'training_screen.dart';
 part 'mixin/training_mixin.dart';
 part 'widgets/training_widget_text.dart';
 part 'widgets/custom_vertical_divider.dart';
+part 'widgets/training_item.dart';
+part 'widgets/delete_alert_dialog.dart';
+part 'widgets/more_bottom_sheet.dart';
+part 'widgets/change_name_bottom_sheet.dart';

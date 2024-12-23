@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:work_out/data/bloc/on_boarding_bloc/on_boarding_bloc.dart';
 import 'package:work_out/data/bloc/settings_bloc/settings_bloc.dart';
 import 'package:work_out/data/bloc/tab_box_bloc/tab_box_bloc.dart';
+import 'package:work_out/data/bloc/training_bloc/training_bloc.dart';
 import 'package:work_out/data/locale_storage/locale_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive/hive.dart';
@@ -17,6 +18,7 @@ Future<void> initApp() async {
   sl.registerSingleton<SettingsBloc>(SettingsBloc());
   sl.registerSingleton<TabBoxBloc>(TabBoxBloc());
   sl.registerLazySingleton<OnBoardingBloc>(OnBoardingBloc.new);
+  sl.registerLazySingleton<TrainingBloc>(TrainingBloc.new);
 }
 
 Future<void> initHive() async {

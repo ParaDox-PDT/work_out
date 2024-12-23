@@ -5,6 +5,7 @@ class CustomTextField extends StatelessWidget {
       {super.key,
       required this.title,
       required this.hintText,
+      this.fillColor,
       required this.controller,
       required this.focusNode});
 
@@ -12,6 +13,7 @@ class CustomTextField extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
   final FocusNode focusNode;
+  final Color? fillColor;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class CustomTextField extends StatelessWidget {
           onTapOutside: (event) => focusNode.unfocus(),
           textInputAction: TextInputAction.done,
           decoration: InputDecoration(
-            fillColor: Colors.white.withOpacity(0.2),
+            fillColor: fillColor ?? Colors.white.withOpacity(0.2),
             filled: true,
             hintText: hintText,
             hintStyle: AppTypography.captionRegular.copyWith(

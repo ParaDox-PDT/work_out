@@ -2,6 +2,7 @@ import 'package:work_out/data/bloc/create_training_bloc/create_training_bloc.dar
 import 'package:work_out/data/bloc/on_boarding_bloc/on_boarding_bloc.dart';
 import 'package:work_out/data/bloc/personalisation_bloc/personalisation_bloc.dart';
 import 'package:work_out/data/bloc/settings_bloc/settings_bloc.dart';
+import 'package:work_out/data/bloc/training_bloc/training_bloc.dart';
 import 'package:work_out/data/locale_storage/locale_storage.dart';
 import 'package:work_out/data/service/injector_container.dart';
 import 'package:work_out/ui/create_training_screen/create_training_screen_part.dart';
@@ -83,8 +84,14 @@ final GoRouter router = GoRouter(
       path: Routes.home,
       pageBuilder: (_, __) => CustomTransitionPage(
         transitionDuration: const Duration(milliseconds: 1200),
-        child: BlocProvider(
-          create: (_) => sl<SettingsBloc>()..add(SettingsInitialEvent()),
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(
+                create: (_) => sl<SettingsBloc>()..add(SettingsInitialEvent())),
+            BlocProvider(
+                create: (_) =>
+                    sl<TrainingBloc>()..add(const TrainingGetEvent())),
+          ],
           child: const TabBox(),
         ),
         transitionsBuilder: (_, animation, __, child) => FadeTransition(

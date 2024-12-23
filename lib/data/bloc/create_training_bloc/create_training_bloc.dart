@@ -70,8 +70,9 @@ class CreateTrainingBloc
 
   Future<void> _onSaveTraining(
       CreateTrainingSaveEvent event, Emitter<CreateTrainingState> emit) async {
-    final AllTrainingModel? allTrainings = localStorage.getAllTrainings();
-    if (allTrainings != null && state.exercises.isNotEmpty) {
+    AllTrainingModel? allTrainings = localStorage.getAllTrainings();
+    allTrainings ??= AllTrainingModel(allTrainings: []);
+    if (state.exercises.isNotEmpty) {
       allTrainings.allTrainings!.add(TrainingModel(
           name: event.trainingName,
           cycle: state.cycles,

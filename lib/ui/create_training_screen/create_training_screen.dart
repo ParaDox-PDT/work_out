@@ -26,6 +26,7 @@ class _CreateTrainingScreenState extends State<CreateTrainingScreen>
                 if (localStorage.getFirstStart()) {
                   if (context.mounted) context.pushNamed(Routes.preparation);
                 } else {
+                  sl<TrainingBloc>().add(const TrainingGetEvent());
                   context.pop();
                 }
               }
