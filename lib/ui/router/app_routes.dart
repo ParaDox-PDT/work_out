@@ -5,7 +5,6 @@ import 'package:work_out/data/bloc/settings_bloc/settings_bloc.dart';
 import 'package:work_out/data/locale_storage/locale_storage.dart';
 import 'package:work_out/data/service/injector_container.dart';
 import 'package:work_out/ui/create_training_screen/create_training_screen_part.dart';
-import 'package:work_out/ui/home_screen/home_screen_part.dart';
 import 'package:work_out/ui/on_boarding_screen/on_boarding_screen_part.dart';
 import 'package:work_out/ui/personalisation_screen/personalisation_screen_part.dart';
 import 'package:work_out/ui/preparation_screen/preparation_screen_part.dart';
@@ -13,6 +12,7 @@ import 'package:work_out/ui/splash_screen/splash_screen_part.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:work_out/ui/tab_box/tab_box_part.dart';
 
 part 'name_routes.dart';
 
@@ -85,7 +85,7 @@ final GoRouter router = GoRouter(
         transitionDuration: const Duration(milliseconds: 1200),
         child: BlocProvider(
           create: (_) => sl<SettingsBloc>()..add(SettingsInitialEvent()),
-          child: const HomeScreen(),
+          child: const TabBox(),
         ),
         transitionsBuilder: (_, animation, __, child) => FadeTransition(
           opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),

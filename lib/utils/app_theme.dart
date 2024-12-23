@@ -67,9 +67,15 @@ final ThemeData lightTheme = appTheme.copyWith(
     titleTextStyle: AppTypography.bodySemiBold,
   ),
   listTileTheme: ListTileThemeData(
-    tileColor: Colors.white.withOpacity(0.2),
-    shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12)),
-    leadingAndTrailingTextStyle: AppTypography.captionRegular
-  )
+      tileColor: Colors.white.withOpacity(0.2),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      leadingAndTrailingTextStyle: AppTypography.captionRegular),
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    backgroundColor: Colors.black.withOpacity(0.85),
+    selectedLabelStyle: AppTypography.smallMedium,
+    unselectedLabelStyle: AppTypography.smallMedium,
+    selectedItemColor: AppColors.c2EA33A,
+    unselectedItemColor: Colors.white.withOpacity(0.5),
+    elevation: 3,
+  ),
 );

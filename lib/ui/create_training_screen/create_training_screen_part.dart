@@ -4,7 +4,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:work_out/data/bloc/create_training_bloc/create_training_bloc.dart';
 import 'package:work_out/data/model/exercise_model.dart';
-import 'package:work_out/ui/on_boarding_screen/on_boarding_screen_part.dart';
 import 'package:work_out/ui/router/app_routes.dart';
 import 'package:work_out/ui/widgets/widgets_part.dart';
 import 'package:work_out/utils/app_colors.dart';

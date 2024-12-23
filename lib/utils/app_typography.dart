@@ -12,9 +12,6 @@ const _h3LineHeight = 46.0;
 const _h4Size = 31.0;
 const _h4LineHeight = 42.0;
 
-const _t1Size = 24.0;
-const _t1LineHeight = 28.64;
-
 const _headlineSize = 22.0;
 const _headlineLineHeight = 26.4;
 
@@ -26,6 +23,9 @@ const _captionLineHeight = 22.0;
 
 const _footnoteSize = 13.0;
 const _footnoteLineHeight = 16.0;
+
+const _smallSize = 11.0;
+const _smallLineHeight = 13.0;
 
 class AppTypography {
   AppTypography._();
@@ -148,35 +148,6 @@ class AppTypography {
       height: _h4LineHeight / _h4Size,
       color: Colors.white);
 
-  // TITLE 1
-  static const t1Regular = TextStyle(
-      fontSize: _t1Size,
-      fontFamily: fontFamily,
-      fontWeight: FontWeight.w400,
-      height: _t1LineHeight / _t1Size,
-      color: Colors.white);
-
-  static const t1Medium = TextStyle(
-      fontSize: _t1Size,
-      fontFamily: fontFamily,
-      fontWeight: FontWeight.w500,
-      height: _t1LineHeight / _t1Size,
-      color: Colors.white);
-
-  static const t1SemiBold = TextStyle(
-      fontSize: _t1Size,
-      fontFamily: fontFamily,
-      fontWeight: FontWeight.w600,
-      height: _t1LineHeight / _t1Size,
-      color: Colors.white);
-
-  static const t1Bold = TextStyle(
-      fontSize: _t1Size,
-      fontFamily: fontFamily,
-      fontWeight: FontWeight.w700,
-      height: _t1LineHeight / _t1Size,
-      color: Colors.white);
-
   // HEADLINE
   static const headlineRegular = TextStyle(
       fontSize: _headlineSize,
@@ -291,5 +262,34 @@ class AppTypography {
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
       height: _footnoteLineHeight / _footnoteSize,
+      color: Colors.white);
+
+  // SMALL
+  static const smallRegular = TextStyle(
+      fontSize: _smallSize,
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      height: _smallLineHeight / _smallSize,
+      color: Colors.white);
+
+  static const smallMedium = TextStyle(
+      fontSize: _smallSize,
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      height: _smallLineHeight / _smallSize,
+      color: Colors.white);
+
+  static const smallSemiBold = TextStyle(
+      fontSize: _smallSize,
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      height: _smallLineHeight / _smallSize,
+      color: Colors.white);
+
+  static const smallBold = TextStyle(
+      fontSize: _smallSize,
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      height: _smallLineHeight / _smallSize,
       color: Colors.white);
 }
