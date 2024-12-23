@@ -23,5 +23,7 @@ class AppIcons {
   static const String runningGrey = '$_assetsPath/running_grey.svg';
   static const String squatGrey = '$_assetsPath/squat_grey.svg';
   static const String soccerGrey = '$_assetsPath/soccer_grey.svg';
+  static const String star = '$_assetsPath/star.svg';
+  static const String share = '$_assetsPath/share.svg';
   static const String yogaGrey = '$_assetsPath/yoga_grey.svg';
 }
