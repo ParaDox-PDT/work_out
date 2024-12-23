@@ -1,5 +1,7 @@
-import 'package:work_out/data/model/default_model.dart';
+import 'package:work_out/data/model/all_training_model.dart';
+import 'package:work_out/data/model/exercise_model.dart';
 import 'package:hive/hive.dart';
+import 'package:work_out/data/model/training_model.dart';
 
 final class LocaleStorage {
   const LocaleStorage(this.box);
@@ -26,6 +28,16 @@ final class LocaleStorage {
   }
 
   bool getMusic() => box.get('music', defaultValue: true);
+
+  /// SAVE AND GET TRAININGS
+  Future<void> setAllTrainings(AllTrainingModel allTrainings) async {
+    await box.put('all_trainings', allTrainings);
+  }
+
+  bool getAllTrainings() => box.get('all_trainings', defaultValue: []);
 }
 
-HiveInterface registerHive() => Hive..registerAdapter(DefaultModelAdapter());
+HiveInterface registerHive() => Hive
+  ..registerAdapter(ExerciseModelAdapter())
+  ..registerAdapter(TrainingModelAdapter())
+  ..registerAdapter(AllTrainingModelAdapter());

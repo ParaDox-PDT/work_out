@@ -13,4 +13,6 @@ class AppIcons {
   static const String training = '$_assetsPath/training.svg';
   static const String statistics = '$_assetsPath/statistics.svg';
   static const String settings = '$_assetsPath/settings.svg';
+  static const String minus = '$_assetsPath/minus.svg';
+  static const String plus = '$_assetsPath/plus.svg';
 }

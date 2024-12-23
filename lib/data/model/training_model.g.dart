@@ -1,35 +1,38 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'default_model.dart';
+part of 'training_model.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class DefaultModelAdapter extends TypeAdapter<DefaultModel> {
+class TrainingModelAdapter extends TypeAdapter<TrainingModel> {
   @override
-  final int typeId = 1;
+  final int typeId = 2;
 
   @override
-  DefaultModel read(BinaryReader reader) {
+  TrainingModel read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return DefaultModel(
-      id: fields[0] as num?,
+    return TrainingModel(
+      cycle: fields[0] as int?,
       name: fields[1] as String?,
+      exercises: (fields[2] as List?)?.cast<ExerciseModel>(),
     );
   }
 
   @override
-  void write(BinaryWriter writer, DefaultModel obj) {
+  void write(BinaryWriter writer, TrainingModel obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
-      ..write(obj.id)
+      ..write(obj.cycle)
       ..writeByte(1)
-      ..write(obj.name);
+      ..write(obj.name)
+      ..writeByte(2)
+      ..write(obj.exercises);
   }
 
   @override
@@ -38,7 +41,7 @@ class DefaultModelAdapter extends TypeAdapter<DefaultModel> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is DefaultModelAdapter &&
+      other is TrainingModelAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

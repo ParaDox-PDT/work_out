@@ -7,13 +7,14 @@ class CreateTrainingScreen extends StatefulWidget {
   State<CreateTrainingScreen> createState() => _CreateTrainingScreenState();
 }
 
-class _CreateTrainingScreenState extends State<CreateTrainingScreen> {
+class _CreateTrainingScreenState extends State<CreateTrainingScreen>
+    with CreateTrainingMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Create training'),
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: !localStorage.getFirstStart(),
         actions: [
           TextButton(
             onPressed: () {},
@@ -25,6 +26,32 @@ class _CreateTrainingScreenState extends State<CreateTrainingScreen> {
             ),
           )
         ],
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: CustomTextField(
+                    title: 'Name',
+                    hintText: 'Training name',
+                    controller: nameController,
+                    focusNode: nameFocusNode,
+                  ),
+                ),
+                24.g,
+                Expanded(
+                  child: ChangeNumbersWidget(
+                    title: 'Number of cycles',
+                    number: '5',
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
