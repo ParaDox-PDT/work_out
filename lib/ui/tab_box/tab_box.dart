@@ -11,6 +11,22 @@ class _TabBoxState extends State<TabBox> with TabBoxMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: SafeArea(
+        child: BlocBuilder<TabBoxBloc, TabBoxState>(
+          bloc: sl<TabBoxBloc>(),
+          buildWhen: (p, c) => p != c,
+          builder: (context, state) {
+            return IndexedStack(
+              index: state.currentIndex,
+              children: const [
+                TrainingScreen(),
+                StatisticsScreen(),
+                SettingsScreen(),
+              ],
+            );
+          },
+        ),
+      ),
       bottomNavigationBar: BlocBuilder<TabBoxBloc, TabBoxState>(
         bloc: sl<TabBoxBloc>(),
         buildWhen: (p, c) => p != c,

@@ -5,6 +5,8 @@ class AppIcons {
   /// ICONS PATH
   static const String backArrow = '$_assetsPath/back_arrow.svg';
   static const String nextArrow = '$_assetsPath/next_arrow.svg';
+  static const String nextArrow1 = '$_assetsPath/next_arrow1.svg';
+  static const String more = '$_assetsPath/more.svg';
   static const String gym = '$_assetsPath/gym.svg';
   static const String pushUp = '$_assetsPath/push_up.svg';
   static const String running = '$_assetsPath/running.svg';
