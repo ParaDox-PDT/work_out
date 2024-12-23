@@ -18,3 +18,5 @@ part 'create_training_screen.dart';
 part 'mixin/create_training_mixin.dart';
 part 'widgets/change_numbers_widget.dart';
 part 'widgets/create_exercise_bottom_sheet.dart';
+part 'widgets/add_step_button.dart';
+part 'widgets/step_item.dart';

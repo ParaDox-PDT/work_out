@@ -75,57 +75,16 @@ class _CreateTrainingScreenState extends State<CreateTrainingScreen>
                   state.exercises.length,
                   (index) {
                     ExerciseModel exercise = state.exercises[index];
-                    return Column(
-                      children: [
-                        ListTile(
-                          tileColor: Colors.transparent,
-                          contentPadding: EdgeInsets.zero,
-                          leading: ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: SvgPicture.asset(
-                              exercise.icon ?? AppIcons.pushUp,
-                              width: 32.w,
-                            ),
-                          ),
-                          title: Text(
-                            exercise.name ?? '',
-                            style: AppTypography.captionSemiBold,
-                          ),
-                          trailing: Text(
-                            '${exercise.minute} min',
-                            style: AppTypography.footnoteRegular
-                                .copyWith(color: Colors.white.withOpacity(0.5)),
-                          ),
-                        ),
-                        const Divider(
-                          color: AppColors.c081319,
-                        )
-                      ],
-                    );
+                    return StepItem(exercise: exercise);
                   },
                 ),
                 24.g,
-                DecoratedBox(
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      bloc.add(const CreateTrainingResetEvent());
-                      showCreateExerciseBSh(context: context, bloc: bloc);
-                    },
-                    borderRadius: BorderRadius.circular(6),
-                    child: Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 10, horizontal: 52.w),
-                      child: const Text(
-                        'Add step',
-                        style: AppTypography.captionRegular,
-                      ),
-                    ),
-                  ),
-                ),
+                AddStepButton(
+                  onTap: () {
+                    bloc.add(const CreateTrainingResetEvent());
+                    showCreateExerciseBSh(context: context, bloc: bloc);
+                  },
+                )
               ],
             );
           },
