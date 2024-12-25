@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:work_out/data/bloc/training_detail_bloc/training_detail_bloc.dart';
 import 'package:work_out/data/model/training_model.dart';
+import 'package:work_out/ui/training_screen/training_screen_part.dart';
 import 'package:work_out/utils/app_colors.dart';
 import 'package:work_out/utils/app_icons.dart';
+import 'package:work_out/utils/app_typography.dart';
 import 'package:work_out/utils/extensions.dart';
+import 'package:work_out/utils/functions/base_functions.dart';
 
 part 'training_detail_screen.dart';
 part 'mixin/training_detail_mixin.dart';
+part 'widgets/td_icons.dart';
+part 'widgets/td_info_widget.dart';
+part 'widgets/td_body.dart';
+part 'widgets/td_footer_button.dart';
+part 'widgets/td_footer.dart';

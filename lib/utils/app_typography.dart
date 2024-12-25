@@ -9,8 +9,8 @@ const _h2LineHeight = 42.0;
 const _h3Size = 36.0;
 const _h3LineHeight = 46.0;
 
-const _h4Size = 31.0;
-const _h4LineHeight = 42.0;
+const _largeSize = 64.0;
+const _largeLineHeight = 76.8;
 
 const _headlineSize = 22.0;
 const _headlineLineHeight = 26.4;
@@ -120,32 +120,32 @@ class AppTypography {
       color: Colors.white);
 
   // HEADER 4
-  static const h4Regular = TextStyle(
-      fontSize: _h4Size,
+  static const largeRegular = TextStyle(
+      fontSize: _largeSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w400,
-      height: _h4LineHeight / _h4Size,
+      height: _largeLineHeight / _largeSize,
       color: Colors.white);
 
-  static const h4Medium = TextStyle(
-      fontSize: _h4Size,
+  static const largeMedium = TextStyle(
+      fontSize: _largeSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w500,
-      height: _h4LineHeight / _h4Size,
+      height: _largeLineHeight / _largeSize,
       color: Colors.white);
 
-  static const h4SemiBold = TextStyle(
-      fontSize: _h4Size,
+  static const largeSemiBold = TextStyle(
+      fontSize: _largeSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w600,
-      height: _h4LineHeight / _h4Size,
+      height: _largeLineHeight / _largeSize,
       color: Colors.white);
 
-  static const h4Bold = TextStyle(
-      fontSize: _h4Size,
+  static const largeBold = TextStyle(
+      fontSize: _largeSize,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
-      height: _h4LineHeight / _h4Size,
+      height: _largeLineHeight / _largeSize,
       color: Colors.white);
 
   // HEADLINE

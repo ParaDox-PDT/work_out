@@ -38,4 +38,8 @@ class AppIcons {
   static const String yogaGreenTD = '$_assetsPath/yoga_green_td.svg';
   static const String star = '$_assetsPath/star.svg';
   static const String share = '$_assetsPath/share.svg';
+  static const String stop = '$_assetsPath/stop.svg';
+  static const String play = '$_assetsPath/play.svg';
+  static const String pause = '$_assetsPath/pause.svg';
+  static const String skip = '$_assetsPath/skip.svg';
 }
