@@ -11,5 +11,6 @@ sealed class Routes {
   static const String personalisation = '/personalisation';
   static const String createTraining = '/create_training';
   static const String preparation = '/preparation';
+  static const String trainingDetail = '/training_detail';
 
 }

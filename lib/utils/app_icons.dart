@@ -23,7 +23,19 @@ class AppIcons {
   static const String runningGrey = '$_assetsPath/running_grey.svg';
   static const String squatGrey = '$_assetsPath/squat_grey.svg';
   static const String soccerGrey = '$_assetsPath/soccer_grey.svg';
+  static const String yogaGrey = '$_assetsPath/yoga_grey.svg';
+  static const String gymTD = '$_assetsPath/gym_td.svg';
+  static const String pushUpTD = '$_assetsPath/push_up_td.svg';
+  static const String runningTD = '$_assetsPath/running_td.svg';
+  static const String squatTD = '$_assetsPath/squat_td.svg';
+  static const String soccerTD = '$_assetsPath/soccer_td.svg';
+  static const String yogaTD = '$_assetsPath/yoga_td.svg';
+  static const String gymGreenTD = '$_assetsPath/gym_green_td.svg';
+  static const String pushUpGreenTD = '$_assetsPath/push_up_green_td.svg';
+  static const String runningGreenTD = '$_assetsPath/running_green_td.svg';
+  static const String squatGreenTD = '$_assetsPath/squat_green_td.svg';
+  static const String soccerGreenTD = '$_assetsPath/soccer_green_td.svg';
+  static const String yogaGreenTD = '$_assetsPath/yoga_green_td.svg';
   static const String star = '$_assetsPath/star.svg';
   static const String share = '$_assetsPath/share.svg';
-  static const String yogaGrey = '$_assetsPath/yoga_grey.svg';
 }

@@ -28,7 +28,18 @@ class _TrainingScreenState extends State<TrainingScreen> with TrainingMixin {
                       onMoreTap: () {
                         showMoreBottomSheet(context: context, index: index);
                       },
-                      onNextTap: () {},
+                      onNextTap: () {
+                        showNextBottomSheet(
+                            context: context,
+                            training: state.allTrainings[index],
+                            onStartTap: () {
+                              context.pop();
+                              context.pushNamed(
+                                Routes.trainingDetail,
+                                extra: state.allTrainings[index],
+                              );
+                            });
+                      },
                     );
                   },
                 ),

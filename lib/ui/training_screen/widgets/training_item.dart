@@ -43,25 +43,7 @@ class TrainingItem extends StatelessWidget {
                     style: AppTypography.bodyRegular,
                   ),
                   8.g,
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        TrainingWidgetText(
-                            title: '${getTotalMinutes(training.exercises!)} min',
-                            text: 'Total time'),
-                        const CustomVerticalDivider(),
-                        TrainingWidgetText(
-                            title: training.exercises!.length.toString(),
-                            text: 'exercises'),
-                        const CustomVerticalDivider(),
-                        TrainingWidgetText(
-                            title: 'x${training.cycle}', text: 'cycles')
-                      ],
-                    ),
-                  )
+                  TrainingInfoWidget(training: training),
                 ],
               ),
             ),
